@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,45 @@
     <link rel="icon" sizes="192x192" href="img/favicon.png?">
     <title>For You</title>
 </head>
+
 <body>
     <div class="heart-cont">
+        <p class="word">aaaaaaaa</p>
         <div class="heart"></div>
     </div>
+    <script>
+        const heart = document.querySelector('.heart');
+        const heartCont = document.querySelector('.heart-cont');
+        let i = 0;
+        const word = document.querySelector('.word');
+        const words = ['', 'I', 'Love', 'You', 'For', 'Ever', 'And', 'Always'];
+        
+        heartCont.addEventListener('click', () => {
+            heart.style.setProperty('--color-primary', '#8136bf');
+
+            const interval = setInterval(() => {
+                word.style.opacity = 0;
+                setTimeout(() => {
+                    word.textContent = words[i];
+                    word.style.opacity = 1;
+                }, 500);
+                i++;
+                if (i === words.length) {
+                    clearInterval(interval);
+                }
+            }, 2000);
+
+            //put final word "DARI"
+            setTimeout(() => {
+                word.style.opacity = 0;
+                setTimeout(() => {
+                    word.textContent = "DARI";
+                    word.style.opacity = 1;
+                }, 500);
+            }, 16000);
+
+        });
+    </script>
 </body>
+
 </html>
