@@ -45,7 +45,7 @@ p{
     color: var(--color-white);
     text-shadow: 0vw 0vw 1vh var(--color-white);
     transition: all 1s ease;
-    transform: translateY(-15vw);
+    transform: translateY(-25vw);
 }
 
 .heart::after{
