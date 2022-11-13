@@ -38,14 +38,13 @@ body{
 }
 
 p{
-    position: absolute;
     font-family: var(--font-family);
     font-size: 5vh;
     text-align: center;
     color: var(--color-white);
     text-shadow: 0vw 0vw 1vh var(--color-white);
     transition: all 1s ease;
-    transform: translateY(-25vw);
+    transform: translateY(-15vw);
 }
 
 .heart::after{
